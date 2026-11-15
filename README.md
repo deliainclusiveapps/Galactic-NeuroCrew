@@ -1,6 +1,6 @@
 # GALACTIC NEUROCREW
 
-- **Desarrollado por:** Delia Gaibor Sanchez
+- **Developed By:** Delia Gaibor Sanchez
 
 ---
 
