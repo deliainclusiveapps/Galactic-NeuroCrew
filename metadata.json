@@ -1,0 +1,6 @@
+{
+  "name": "GALACTIC NEUROCREW",
+  "description": "Inclusive 2D educational space-mission game for children aged 7-12 built for the NASA Space Apps Challenge 2026 by Delia Gaibor Sanchez (Delia Inclusive Apps).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

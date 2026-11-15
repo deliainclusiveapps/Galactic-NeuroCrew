@@ -1,0 +1,1129 @@
+# MASTER PROMPT — GALACTIC NEUROCREW
+## NASA Space Apps Challenge 2026 | Functional Educational Game Prototype
+
+Act as a senior multidisciplinary development team composed of a game designer, front-end engineer, UX/UI designer, accessibility specialist, educational content designer, and scientific data integration engineer.
+
+Your task is to **design and build a complete, functional, responsive, inclusive 2D educational video game prototype** called **GALACTIC NEUROCREW**, intended for children aged 7–12.
+
+The application will be developed in **Google AI Studio Build** and must be ready to run in a web browser, be published on GitHub Pages, and be prepared for a future Android Studio integration.
+
+Do not deliver only a visual mockup, a landing page, a dashboard, or a static demonstration. Build a playable experience with working screens, game mechanics, decisions, resource management, consequences, level progression, replayability, NASA data integration, and a final mission report.
+
+---
+
+# 1. PROJECT IDENTITY
+
+**Game title:** GALACTIC NEUROCREW  
+**Challenge:** NASA Space Apps Challenge 2026  
+**Selected challenge:** Build a Junior Astronaut Mission Trainer  
+**Developer credit:** Desarrollado por: Delia Gaibor Sanchez  
+**Organization:** Delia Inclusive Apps  
+**Tagline:** La innovación de la inclusión.
+
+The visual identity should be inspired by the professional appearance of NASA mission-control environments: deep navy blue, space blue, white, cyan, and restrained accents of orange or yellow for alerts.
+
+The visual style must feel scientific, modern, polished, trustworthy, and exciting for children.
+
+Use an original visual identity. Do not use NASA insignia, official NASA logos, or elements that could imply that this project is an official NASA product or has NASA endorsement.
+
+---
+
+# 2. MAIN OBJECTIVE AND EDUCATIONAL PURPOSE
+
+The game must allow children aged 7–12 to manage a simulated lunar outpost and make meaningful decisions about:
+
+- Oxygen and life support.
+- Water reserves and consumption.
+- Energy generation and distribution.
+- Radiation protection and solar activity.
+- Food production and storage.
+- Communication delays between Earth and the lunar outpost.
+- Mission priorities and limited resources.
+
+The main educational purpose is to demonstrate that space exploration involves real engineering trade-offs.
+
+Every important decision must have a consequence. No option should be completely free or automatically correct in every situation.
+
+Examples of the intended gameplay:
+
+- Using oxygen reserves to extend a scientific activity may reduce the safety margin for the crew.
+- Increasing radiation protection may consume energy needed for other habitat systems.
+- Allocating energy to greenhouse lighting may reduce the energy available for other equipment.
+- Delayed communication may prevent astronauts from receiving immediate instructions from Earth.
+- Producing food locally may require energy, water, time, and careful planning.
+
+The player must understand that astronauts and mission planners make decisions with limited resources, incomplete information, and changing conditions.
+
+Use simple language suitable for children. Explain scientific concepts briefly when they appear in the game.
+
+Examples:
+
+- **Radiation:** Energy that travels through space and can harm living things.
+- **Solar flare:** A sudden burst of energy from the Sun.
+- **Microgravity:** A condition in which objects appear to float because they are in very weak gravity or are continuously falling around a celestial body.
+- **Communication delay:** The time it takes for a message to travel between the outpost and Earth.
+
+Do not assume that children already understand scientific vocabulary.
+
+---
+
+# 3. REQUIRED APPLICATION STRUCTURE
+
+Build the experience as a complete game with the following screens and navigation.
+
+## SCREEN 1 — WELCOME AND ASTRONAUT SELECTION
+
+Create an attractive, illustrated 2D welcome screen.
+
+It must include:
+
+- The game title: GALACTIC NEUROCREW.
+- The developer credit: Desarrollado por: Delia Gaibor Sanchez.
+- A large, original 2D illustration of a child astronaut boy.
+- A large, original 2D illustration of a child astronaut girl.
+- A character selection interaction.
+- A nickname input field with a maximum of 10 characters.
+- A clear START MISSION button.
+- A small accessibility/settings entry point.
+
+The player must select either the boy or the girl before starting.
+
+The two characters must be original, friendly, visually appealing, and clearly recognizable as children.
+
+They must have consistent visual characteristics throughout the entire game. Do not change their appearance, clothing, proportions, or illustration style between levels.
+
+The selected character must appear in the mission scenes and the mission-control interface.
+
+The nickname is optional. If the player does not enter one, use a neutral default such as Junior Astronaut.
+
+Store only the nickname, selected character, accessibility preferences, and game progress locally in the browser. Do not request an account, email address, password, or personal information.
+
+## SCREEN 2 — MISSION SELECTION
+
+After the welcome screen, display a mission-selection screen containing exactly five illustrated level cards.
+
+Each level must have:
+
+- A distinctive 2D illustration.
+- Its number and title.
+- A short description.
+- Its completion status.
+- Its corresponding badge or trophy.
+- A clear visual distinction between locked, available, and completed levels.
+
+Progression rules:
+
+1. Level 1 is unlocked from the beginning.
+2. Levels 2–5 remain locked until the previous level is successfully completed.
+3. Completing a level unlocks the next one.
+4. A completed level can be played again.
+5. Replaying a level must not erase previously earned badges or the player's overall progress.
+
+Include a mission-progress indicator and a menu for completed missions and earned badges.
+
+## SCREEN 3 — MISSION ENVIRONMENT
+
+Every level must open into a fully illustrated 2D environment.
+
+This is a fundamental requirement.
+
+Do not represent the game exclusively through cards, tables, charts, text boxes, or control panels.
+
+The player must see a recognizable space environment with:
+
+- The selected child astronaut.
+- A lunar habitat or outpost.
+- Environmental elements related to the current mission.
+- Interactive objects and equipment.
+- Visual indicators of the current situation.
+- A clear mission objective.
+
+The environment must change according to the level and the challenge.
+
+Use original 2D illustrations, SVG illustrations, CSS illustrations, or HTML Canvas where appropriate. The scenes must be genuinely visible and interactive, not empty backgrounds with text placed over them.
+
+The game must have a coherent illustrated art direction throughout all five levels.
+
+## SCREEN 4 — CHALLENGE AND DECISION INTERFACE
+
+Each level contains three challenges.
+
+For every challenge, implement:
+
+1. A short narrative introduction.
+2. A 2D illustrated scene showing the situation.
+3. The current mission problem.
+4. A simple and specific objective.
+5. The available resources.
+6. At least two meaningful decision options.
+7. A pictogram or illustration for each decision.
+8. A clear explanation of the possible trade-offs.
+9. A functional choice interaction.
+10. A visible update of resources and mission status after the decision.
+11. An explanation of the outcome.
+12. A short educational lesson.
+
+After each decision, display these sections:
+
+**YOUR DECISION**  
+Show the option selected by the player.
+
+**WHAT HAPPENED?**  
+Explain the immediate consequences in simple language.
+
+**WHY DOES THIS MATTER IN SPACE?**  
+Connect the result to a real engineering or mission-planning principle.
+
+**MISSION LESSON**  
+Present one short concept the child should remember.
+
+The player must be able to continue, retry, or review the lesson as appropriate.
+
+## SCREEN 5 — MISSION RESULTS AND BADGES
+
+At the end of each level, show:
+
+- The mission result.
+- The three challenges completed.
+- The resources remaining.
+- The decisions made.
+- The lessons learned.
+- The badge earned.
+- A button to continue to the next unlocked level.
+- A button to replay the level.
+
+## SCREEN 6 — MISSION ARCHIVE AND FINAL REPORT
+
+Include a section where players can review:
+
+- Completed levels.
+- Completed challenges.
+- Earned badges.
+- Mission decisions.
+- Important lessons.
+- Final resource status.
+- Overall progress.
+
+At the end of the fifth level, generate a final mission report that summarizes the player's journey.
+
+The report should include the selected astronaut, nickname if provided, completed missions, badges, decisions, consequences, remaining resources, and concepts learned.
+
+---
+
+# 4. THE FIVE LEVELS AND FIFTEEN CHALLENGES
+
+Create exactly five levels with three challenges per level.
+
+The levels must follow a progressive educational sequence. Introduce basic survival concepts first and gradually increase the complexity of decisions.
+
+## LEVEL 1 — LUNAR ARRIVAL
+### First Day on the Moon
+
+**Visual environment:** A lunar landing area with a lander, lunar surface, habitat module, distant Earth, equipment, and the selected child astronaut in a spacesuit.
+
+The environment must clearly look like the Moon.
+
+**Badge:** LUNAR ARRIVAL
+
+### Challenge 1.1 — Oxygen Supply
+
+Narrative:
+
+The crew has arrived at the lunar outpost. The oxygen system is working, but the available reserve is limited. The player must decide how to manage oxygen during the first mission activities.
+
+Gameplay:
+
+- Show the oxygen supply and the habitat.
+- Let the player choose between conserving oxygen and allocating more oxygen to an additional activity.
+- Make the trade-off visible.
+- Explain why oxygen reserves are essential for crew survival.
+
+### Challenge 1.2 — Water Management
+
+Narrative:
+
+The outpost has a limited water supply. The crew needs water for drinking, hygiene, and scientific activities.
+
+Gameplay:
+
+- Show water storage containers and the habitat.
+- Let the player choose how to distribute the available water.
+- Demonstrate how one activity can reduce the water available for another.
+- Explain why water recycling and careful management matter in space.
+
+### Challenge 1.3 — Emergency Life Support
+
+Narrative:
+
+An alert indicates that one of the habitat's life-support systems is not operating as expected.
+
+Gameplay:
+
+- Show the affected equipment in the 2D habitat.
+- Present different responses, such as prioritizing crew safety or allocating resources to diagnose the system.
+- Make the consequences visible.
+- Teach why life-support systems require monitoring and backup plans.
+
+At the end of Level 1, award the LUNAR ARRIVAL badge and unlock Level 2.
+
+---
+
+## LEVEL 2 — POWER CONTROL
+### Energy Is Everything
+
+**Visual environment:** A lunar outpost with solar panels, batteries, cables, habitat lighting, scientific equipment, and a visible lunar landscape.
+
+The scene must make energy generation and consumption understandable visually.
+
+**Badge:** ENERGY COMMANDER
+
+### Challenge 2.1 — Solar Power
+
+Narrative:
+
+The outpost uses solar panels to generate electrical energy. Available sunlight and stored energy affect how much equipment can operate.
+
+Gameplay:
+
+- Show the solar panels and the energy storage system.
+- Present an energy-management decision.
+- Allow the player to prioritize energy generation, storage, or immediate consumption.
+- Explain the relationship between energy production and mission needs.
+
+### Challenge 2.2 — Energy Distribution
+
+Narrative:
+
+Several systems need energy at the same time. The player must decide which systems receive priority.
+
+Gameplay:
+
+- Show the habitat and its energy-consuming systems.
+- Include life support, lighting, scientific equipment, and communication equipment.
+- Let the player distribute a limited energy budget.
+- Show which systems are affected by the decision.
+- Teach that energy is a limited resource that must be planned carefully.
+
+### Challenge 2.3 — Science or Survival
+
+Narrative:
+
+The crew has an opportunity to conduct an additional scientific experiment. However, the experiment requires energy that may be needed by the habitat during the next operational period.
+
+Gameplay:
+
+- Present a meaningful choice between scientific activity and maintaining essential systems.
+- Make the resource cost and consequences visible.
+- Do not make one answer universally correct; the best decision should depend on the current mission conditions.
+- Teach the difference between scientific priorities and essential survival needs.
+
+At the end of Level 2, award the ENERGY COMMANDER badge and unlock Level 3.
+
+---
+
+## LEVEL 3 — RADIATION ALERT
+### Protect the Crew
+
+**Visual environment:** A lunar outpost with a radiation-monitoring station, the Sun visible in the sky or through a monitoring display, an external habitat area, and a reinforced radiation shelter.
+
+The scene must visually communicate that the crew is responding to a space-weather situation.
+
+**Badge:** RADIATION GUARDIAN
+
+### Challenge 3.1 — Solar Activity
+
+Narrative:
+
+Mission Control receives information about solar activity. The player must understand the event and decide how the crew should prepare.
+
+NASA data integration is especially important in this challenge.
+
+Use NASA DONKI when a valid response is available. Display real event information and explain its meaning in child-friendly language.
+
+The game must distinguish between:
+
+- A real solar event reported by NASA.
+- The date and type of observation.
+- The educational interpretation.
+- The simulated effect used by the game.
+
+Do not claim that every solar flare automatically creates a dangerous radiation dose for astronauts on the lunar surface.
+
+A solar flare, coronal mass ejection, solar energetic particle event, and geomagnetic storm are different phenomena. Explain them correctly and do not treat them as interchangeable.
+
+### Challenge 3.2 — Radiation Shelter
+
+Narrative:
+
+The crew may need to spend time in a protected area while the mission team evaluates the situation.
+
+Gameplay:
+
+- Show the radiation shelter and the habitat.
+- Allow the player to choose how to use available protection and energy.
+- Demonstrate that reinforcing protection or operating additional equipment can require resources.
+- Explain how shielding and protected areas help reduce exposure.
+
+### Challenge 3.3 — Mission Response
+
+Narrative:
+
+Mission Control must decide how to respond to the available information while maintaining the outpost's essential systems.
+
+Gameplay:
+
+- Present a mission-response decision based on the event information and the game's educational conditions.
+- Let the player prioritize crew safety, energy, and mission activities.
+- Show the consequences of the chosen response.
+- Explain why real mission decisions depend on event characteristics, measurements, spacecraft or habitat protection, and operational context.
+
+At the end of Level 3, award the RADIATION GUARDIAN badge and unlock Level 4.
+
+---
+
+## LEVEL 4 — FOOD AND COMMUNICATION
+### Life Far from Earth
+
+**Visual environment:** A lunar greenhouse connected to the habitat, plant-growing modules, food storage, water systems, lighting equipment, communication antennas, and Earth visible in the distance.
+
+The player must recognize that food production and communication are essential parts of a long-duration mission.
+
+**Badge:** SUSTAINABLE EXPLORER
+
+### Challenge 4.1 — Lunar Greenhouse
+
+Narrative:
+
+The crew is testing a small greenhouse to produce food. Plants need water, energy, nutrients, and suitable environmental conditions.
+
+Gameplay:
+
+- Show a visually recognizable greenhouse.
+- Allow the player to choose how to allocate resources to plant growth.
+- Demonstrate the relationship between water, energy, and food production.
+- Teach why growing food in space is challenging.
+
+Use real NASA biological research where appropriate, but do not invent scientific findings.
+
+### Challenge 4.2 — Food Reserves
+
+Narrative:
+
+The outpost has stored food, but the crew must plan how to use it while waiting for the next supply opportunity.
+
+Gameplay:
+
+- Show food storage and the greenhouse.
+- Let the player decide how to balance stored food and locally produced food.
+- Demonstrate how resource decisions affect future mission sustainability.
+- Teach why food reserves and local food production are both important.
+
+### Challenge 4.3 — Communication Delay
+
+Narrative:
+
+The crew sends a question to Earth, but the response does not arrive immediately. The player must decide what to do while waiting.
+
+Gameplay:
+
+- Show the communication antenna, Earth, and the lunar habitat.
+- Present a situation in which the player cannot receive immediate instructions.
+- Allow the player to follow a previously established safe procedure or wait for more information when appropriate.
+- Represent communication delay as a mission constraint, not as a consumable resource.
+- Explain why crews need training, procedures, and the ability to operate autonomously.
+
+At the end of Level 4, award the SUSTAINABLE EXPLORER badge and unlock Level 5.
+
+---
+
+## LEVEL 5 — ULTIMATE MISSION
+### Lunar Outpost Commander
+
+**Visual environment:** A larger lunar base combining the habitat, solar panels, greenhouse, communication antenna, radiation shelter, rover, landing area, and mission-control elements.
+
+This level must visually bring together the systems introduced in the previous levels.
+
+**Badge:** MISSION COMMANDER
+
+### Challenge 5.1 — Mission Preparation
+
+Narrative:
+
+The player is responsible for preparing the outpost for a new operational period. All resources must be reviewed before the next mission activity.
+
+Gameplay:
+
+- Show the complete lunar base.
+- Require the player to evaluate oxygen, water, energy, food, and protection.
+- Present a preparation decision with competing priorities.
+- Teach how mission planning combines several interconnected systems.
+
+### Challenge 5.2 — Unexpected Event
+
+Narrative:
+
+An unexpected simulated event affects the outpost. The player must adapt the previous plan.
+
+Gameplay:
+
+- Select an event from a controlled set of possible events.
+- Examples may include reduced energy generation, a water-system problem, a greenhouse issue, or a simulated space-weather alert.
+- Make it clear whether the event is based on a real NASA observation or is fictional and created for the educational simulation.
+- Let the player adapt the resource plan.
+- Allow recovery and retry after an unsuccessful decision.
+
+### Challenge 5.3 — Final Decision
+
+Narrative:
+
+The player must make a final mission-planning decision by considering the resources, environmental conditions, and information gathered throughout the game.
+
+Gameplay:
+
+- Present a multi-resource decision.
+- Make the trade-offs visible.
+- Evaluate the player's ability to balance crew safety, resource availability, scientific objectives, and mission continuity.
+- Display the consequences and the final mission lesson.
+
+At the end of Level 5, award the MISSION COMMANDER badge and display the final mission report.
+
+---
+
+# 5. GAMEPLAY AND RESOURCE MANAGEMENT
+
+Implement a real resource-management system.
+
+The main resources are:
+
+1. Oxygen.
+2. Water.
+3. Energy.
+4. Food.
+5. Radiation protection.
+
+Communication delay is a mission constraint and must not be displayed as a consumable resource.
+
+Each resource must have:
+
+- A current value.
+- A visual indicator.
+- A clear label.
+- A simple explanation.
+- A visible update after decisions.
+
+Use a consistent internal simulation model.
+
+Important rules:
+
+- Every decision must have a consequence.
+- Resource changes must be calculated by JavaScript, not merely described in text.
+- Resource costs and outcomes must be consistent.
+- Do not allow impossible resource values.
+- Do not present educational simulation parameters as official NASA engineering specifications.
+- Label game-specific values as educational simulation parameters.
+- Explain why a resource changed after each decision.
+- Make essential resources visually easy to understand.
+- Avoid punishing children with permanent failure or an unrecoverable game state.
+
+The game should reward thoughtful planning, not guessing.
+
+Implement a clear and understandable scoring or mission-performance system. Reward resource management, safety awareness, and learning. Do not reward reckless choices simply because they produce a higher score.
+
+---
+
+# 6. REPLAYABILITY AND LEARNING FROM FAILURE
+
+Replayability is an explicit requirement.
+
+The game must encourage children to try different strategies and understand the consequences of their decisions.
+
+Implement:
+
+- Controlled variation in conditions between attempts.
+- Different possible simulated events.
+- Alternative decision paths.
+- Different resource starting conditions where appropriate.
+- Multiple valid strategies depending on the situation.
+- The possibility of improving a previous result.
+- A retry mechanism after an unsuccessful challenge.
+- Feedback explaining what could be improved.
+
+Use a controlled and reproducible randomization system so that the game can vary between attempts without becoming inconsistent or impossible to complete.
+
+A failed challenge must not permanently block the player.
+
+Do not erase earned badges or completed levels because of a failed replay.
+
+When the player makes a poor decision, explain the consequence and offer an opportunity to learn and try again.
+
+Clearly distinguish between:
+
+- A real NASA observation.
+- A historical NASA dataset.
+- A fictional event generated by the educational simulation.
+- A numerical parameter created exclusively for gameplay.
+
+Never label a fictional event as a real NASA event.
+
+---
+
+# 7. NASA DATA INTEGRATION
+
+NASA open data must be used where technically and scientifically appropriate.
+
+The game must not simply display NASA names or links. It must demonstrate how actual data informs the educational experience.
+
+Implement a dedicated NASA data module in JavaScript.
+
+The module must:
+
+- Retrieve data from documented public endpoints.
+- Validate responses before using them.
+- Handle missing or incomplete data.
+- Display the source and date of the information.
+- Explain the relationship between the data and the challenge.
+- Distinguish live data from historical data and educational simulation.
+- Avoid presenting missing measurements as zero.
+- Avoid inventing NASA measurements.
+- Avoid claiming that a dataset was integrated if the application does not actually retrieve or use it.
+
+Use the following sources.
+
+## 7.1 NASA DONKI — Space Weather Database
+
+Official API base:
+
+`https://api.nasa.gov/DONKI/`
+
+Use the documented endpoints that are relevant to space weather:
+
+- `/DONKI/FLR` — Solar flares.
+- `/DONKI/CME` — Coronal mass ejections.
+- `/DONKI/SEP` — Solar energetic particle events.
+- `/DONKI/GST` — Geomagnetic storm events.
+
+Use appropriate date parameters such as `startDate` and `endDate` according to the official endpoint documentation.
+
+For endpoints that require a NASA API key, use the public demonstration credential:
+
+`DEMO_KEY`
+
+Do not request, insert, expose, or depend on the developer's personal NASA API key.
+
+DONKI must be the main real-data source for Level 3, especially the Solar Activity challenge.
+
+Use the retrieved information to:
+
+- Show whether relevant events are available for the selected period.
+- Display the event type and observation date.
+- Present a simple explanation for children.
+- Inform the educational scenario or the conditions of the simulation.
+- Connect the player's protection decision to real space-weather information.
+
+Important scientific limitation:
+
+DONKI event records do not automatically provide the radiation dose received by a person inside a lunar habitat. Do not calculate or claim a crew radiation dose from an event record unless an appropriate, documented dataset and valid scientific method are available.
+
+If the API is unavailable, explain that the real source could not be reached and allow the player to continue using a clearly labeled educational simulation.
+
+## 7.2 NASA OSDR — Open Science Data Repository
+
+Official portal:
+
+`https://osdr.nasa.gov/`
+
+Biological data API documentation and access:
+
+`https://visualization.osdr.nasa.gov/biodata/api/`
+
+Use OSDR to introduce real research related to:
+
+- Space biology.
+- Human health in space.
+- Biological responses to the space environment.
+- Plants and organisms in space research.
+- Research relevant to long-duration missions.
+
+Use only endpoints and response formats documented by OSDR.
+
+Do not assume that OSDR uses the NASA API `DEMO_KEY`. Follow its own documentation and authentication requirements.
+
+Use OSDR in Level 4, particularly in the Lunar Greenhouse and Food Reserves challenges, when a relevant research dataset can be verified.
+
+The application must explain in simple language what the selected research investigates and why it is relevant to life in space.
+
+Do not invent research conclusions or imply that a specific study proves something it does not.
+
+## 7.3 NASA Image and Video Library
+
+Official website:
+
+`https://images.nasa.gov/`
+
+API base:
+
+`https://images-api.nasa.gov`
+
+Documented endpoints:
+
+- `GET /search?q={q}` — Search for media.
+- `GET /asset/{nasa_id}` — Retrieve a media asset manifest.
+- `GET /metadata/{nasa_id}` — Retrieve media metadata location.
+- `GET /captions/{nasa_id}` — Retrieve video captions location.
+
+Use this source to retrieve relevant educational imagery, such as:
+
+- Lunar landscapes.
+- Moon missions.
+- Astronaut activities.
+- Space habitats.
+- Solar activity.
+- Space research.
+- Planetary exploration.
+
+Use only media that improves the educational experience.
+
+Do not download the entire library. Retrieve only the media needed for a particular screen or challenge.
+
+Preserve the NASA media identifier and available attribution or metadata.
+
+Do not replace the original illustrated game characters with unrelated photographs. NASA media should complement the original 2D visual identity.
+
+## 7.4 NASA EPIC — Earth Polychromatic Imaging Camera
+
+Official documentation:
+
+`https://epic.gsfc.nasa.gov/about/api`
+
+API examples:
+
+`https://api.nasa.gov/EPIC/api/natural/images?api_key=DEMO_KEY`
+
+`https://api.nasa.gov/EPIC/api/natural/date/YYYY-MM-DD?api_key=DEMO_KEY`
+
+`https://api.nasa.gov/EPIC/api/natural/all?api_key=DEMO_KEY`
+
+EPIC provides daily imagery of Earth collected by the DSCOVR satellite.
+
+Use it as an educational visual source to show Earth from space, its relationship with the Sun, and the perspective of observing Earth from a distant location.
+
+Use the metadata supplied by the API, including the image name, date, caption, and relevant coordinates when appropriate.
+
+Do not present EPIC imagery as a radiation measurement or as a direct measurement of lunar surface conditions.
+
+Use `DEMO_KEY` where required by the documented endpoint.
+
+## 7.5 NASA Vesta / Moon / Mars Trek WMTS
+
+Official documentation:
+
+`https://trek.nasa.gov/tiles/apidoc/`
+
+Moon Trek documentation:
+
+`https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=moon`
+
+These services provide planetary mapping tiles through WMTS.
+
+Use Moon Trek as a possible source for lunar surface maps and terrain visualization.
+
+If Mars-related material is used for educational comparison, use the documented Mars Trek services.
+
+Before constructing tile URLs:
+
+- Retrieve and inspect the official WMTS GetCapabilities document.
+- Identify the actual layer.
+- Identify the valid style.
+- Identify the correct TileMatrixSet.
+- Identify the supported tile format and URL template.
+- Respect the available geographic coverage.
+
+Do not invent WMTS layer names, tile matrix identifiers, or URLs.
+
+The map service should be used to add scientific context to the lunar environment, not to replace the game's illustrated 2D scenes.
+
+If the map service cannot be loaded, keep the original game scene functional and display an appropriate source-availability message.
+
+## 7.6 NASA InSight Mars Weather Service API
+
+Documented endpoint:
+
+`https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0`
+
+Documentation:
+
+`https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf`
+
+Weather information:
+
+`https://mars.nasa.gov/insight/weather/`
+
+This source contains historical Mars surface weather measurements from the InSight mission, including temperature, wind, and pressure.
+
+Important limitations:
+
+- The documentation provided is dated March 30, 2021.
+- The InSight mission has ended.
+- The service may no longer provide current operational data.
+- The source reports missing measurements and incomplete data.
+- Values may have been recalculated as additional data were received.
+- Missing data must never be interpreted as zero.
+
+Use this source only if the endpoint is still accessible and the returned data can be validated.
+
+Label the information as historical Mars weather, not current Mars weather.
+
+Use it as an optional educational comparison to help children understand environmental conditions on another world. It must not be presented as current lunar conditions.
+
+If the service is unavailable, do not invent replacement measurements.
+
+---
+
+# 8. NASA DATA TRANSPARENCY AND SCIENTIFIC TRACEABILITY
+
+Create a dedicated section called:
+
+**NASA DATA SOURCES AND SCIENTIFIC CONTEXT**
+
+This section must be accessible from the main menu and included in the final README.
+
+For each dataset actually used, document:
+
+- Dataset or API name.
+- NASA source or official documentation URL.
+- Endpoint used.
+- Relevant data fields.
+- Retrieval date or date of the returned observation, as applicable.
+- Whether the data are live, historical, or archival.
+- Which game level and challenge use the information.
+- Why the source is relevant to the educational objective.
+- How the information affects the game.
+- Known limitations.
+
+The judges must be able to trace and verify the scientific basis of the prototype.
+
+Clearly identify which information comes from NASA and which numerical values are educational simulation parameters created for gameplay.
+
+Do not claim that all six APIs are integrated if only some are actually used by the application.
+
+If a source cannot be connected or validated, document that limitation honestly.
+
+The prototype must explicitly demonstrate the following three challenge requirements:
+
+1. **Real consequences connected to NASA information:** Show how a player's radiation-protection decision relates to actual space-weather information from DONKI when available. Clearly distinguish the observation from the simulated gameplay consequences.
+
+2. **Replayability:** Show how different conditions and events can produce different decisions and outcomes across attempts. Allow children to learn from failure without permanent penalties.
+
+3. **Functional prototype and data explanation:** Provide a working game and a clear explanation of the NASA datasets actually used and why they were selected.
+
+---
+
+# 9. ONLINE ARCHITECTURE, API SECURITY, AND DATA HANDLING
+
+The game must operate online and retrieve NASA information when required.
+
+Do not require a paid cloud service, a paid backend, user registration, or a developer account.
+
+Use public NASA endpoints according to their documentation.
+
+## API key requirements
+
+The developer explicitly does not want to use a personal NASA API key.
+
+Use only `DEMO_KEY` for NASA endpoints that document support for it.
+
+Do not request the developer's personal key.
+
+Do not insert any private key, secret, password, or token into the source code or repository.
+
+For endpoints that do not require a key, do not add one.
+
+Because `DEMO_KEY` is a shared demonstration credential with usage limits:
+
+- Avoid unnecessary repeated requests.
+- Avoid requesting the same information multiple times during one game session.
+- Request data only when needed.
+- Handle rate limits and API errors gracefully.
+- Do not assume that the demonstration credential provides unlimited usage.
+
+Do not assume that every NASA API allows direct browser requests. Verify the endpoint's documented access requirements, HTTPS support, and browser CORS behavior before integrating it.
+
+Do not claim successful integration until a real request has been tested.
+
+## Online-only NASA data
+
+NASA datasets must be retrieved online.
+
+Do not download or store complete NASA datasets in the application.
+
+Do not create a local repository of NASA data.
+
+Do not implement offline NASA data synchronization.
+
+Do not cache NASA API responses for offline use.
+
+Small in-memory reuse during the current session may be used to avoid duplicate requests.
+
+If the internet connection or an API is unavailable:
+
+- Display a clear message.
+- Identify the unavailable source.
+- Do not fabricate live information.
+- Allow the game to continue using predefined educational simulation conditions, clearly labeled as simulation.
+
+The player must be able to complete the educational game even when a NASA endpoint is temporarily unavailable.
+
+---
+
+# 10. TECHNICAL REQUIREMENTS AND PROJECT STRUCTURE
+
+Build the application using:
+
+- HTML5.
+- CSS3.
+- Vanilla JavaScript ES6+.
+- JSON.
+- Fetch API for documented online data retrieval.
+- SVG, CSS, or Canvas for original 2D illustrations and interactive elements.
+
+The source code must be compatible with static hosting on GitHub Pages.
+
+Do not use TypeScript.
+
+Do not use a framework or build process that requires compiling the application before it can run.
+
+Do not require Node.js at runtime.
+
+Do not require a server to run the game.
+
+Do not make the game dependent on a paid service.
+
+Use relative paths for local project resources so the application works correctly from a GitHub Pages repository URL.
+
+Suggested project structure:
+
+```text
+galactic-neurocrew/
+│
+├── index.html
+├── styles.css
+├── manifest.json
+├── README.md
+│
+├── js/
+│   ├── app.js
+│   ├── game.js
+│   ├── missions.js
+│   ├── challenges.js
+│   ├── resources.js
+│   ├── decisions.js
+│   ├── nasa-data.js
+│   ├── accessibility.js
+│   ├── storage.js
+│   └── report.js
+│
+└── assets/
+    ├── characters/
+    ├── environments/
+    ├── objects/
+    ├── pictograms/
+    ├── backgrounds/
+    └── badges/
+```
+
+You may adjust the file organization if necessary, but keep the application simple, modular, and easy to inspect.
+
+The game must run directly from `index.html` in a compatible browser environment and must be publishable on GitHub Pages.
+
+If browser restrictions prevent a NASA API request from working when opened directly from a local file, document that the game should be tested through a local HTTP server or GitHub Pages.
+
+## Source-code comments
+
+Do not include AI-generated explanatory comments in HTML, CSS, JavaScript, or JSON source files.
+
+The code must remain readable through clear naming, modular organization, and consistent formatting, without explanatory comments.
+
+Do not add comments that identify the code as AI-generated.
+
+---
+
+# 11. PWA AND MULTI-PLATFORM COMPATIBILITY
+
+The application must be responsive and PWA-compatible.
+
+Include a valid `manifest.json` with:
+
+- Application name.
+- Short name.
+- Description.
+- Start URL.
+- Display mode.
+- Theme color.
+- Background color.
+- Appropriate application icons.
+- Orientation where appropriate.
+
+Use a professional navy-blue and space-inspired color palette.
+
+PWA installability is allowed and encouraged where supported by the browser.
+
+Do not promise offline functionality.
+
+Do not cache NASA datasets or create an offline NASA data repository.
+
+If a service worker is used for PWA support, do not use it to cache NASA API responses or downloaded NASA datasets. Do not claim that the game can operate offline unless that functionality is actually implemented and tested.
+
+The application must adapt to:
+
+- Android phones and tablets.
+- iOS devices and iPadOS.
+- Amazon FireOS devices.
+- Windows.
+- Linux.
+- macOS.
+
+Use responsive HTML and CSS so the interface adapts to small mobile screens, tablets, laptops, and desktop monitors.
+
+Test touch interaction and mouse/keyboard interaction.
+
+Use standard web technologies and avoid platform-specific features that would prevent the application from running in modern browsers.
+
+Do not claim identical PWA installation behavior on every platform. Browser and operating-system capabilities may differ.
+
+---
+
+# 12. FUTURE ANDROID STUDIO INTEGRATION
+
+Prepare the project so it can later be integrated into an Android application through Android Studio.
+
+The intended future workflow is:
+
+1. Develop the game as a web application using HTML, CSS, and JavaScript.
+2. Publish the working application on GitHub Pages.
+3. Create an Android Studio project.
+4. Integrate the published game through an Android WebView or another appropriate web-app packaging approach.
+5. Configure internet permission and JavaScript support.
+6. Test navigation, external links, NASA API requests, responsive layouts, and media.
+7. Generate an APK or AAB when ready.
+
+Do not convert the game into Kotlin or rewrite the gameplay as a native Android application.
+
+Do not add Android Studio-specific code to the main web project unless it is necessary for browser compatibility.
+
+Keep the web application independent and fully functional.
+
+---
+
+# 13. INCLUSIVE DESIGN AND ACCESSIBILITY
+
+Inclusivity is a core design requirement, not an optional feature.
+
+Design the game for children with different communication, sensory, learning, and motor needs.
+
+Include:
+
+- Simple and short instructions.
+- Clear language.
+- Large buttons.
+- Large and recognizable pictograms.
+- High-contrast text and controls.
+- Consistent visual placement of important controls.
+- Clear labels for every icon.
+- Visual feedback for actions.
+- Optional narration or text-to-speech where browser support allows.
+- The ability to repeat instructions.
+- Keyboard navigation.
+- Visible keyboard focus.
+- Subtitles for spoken information.
+- Adjustable text size.
+- Reduced-motion mode.
+- Independent sound and music controls.
+- No flashing effects.
+- No mandatory time pressure.
+- No information communicated through color alone.
+
+Use pictograms alongside text for important decisions.
+
+Each pictogram must represent one clear concept and be easy to understand.
+
+Do not overcrowd the screen.
+
+The player must be able to understand the objective and available choices without needing to read long paragraphs.
+
+Use accessible HTML semantics and appropriate labels.
+
+Do not make sound, color perception, fast reactions, or complex reading a requirement for completing a challenge.
+
+---
+
+# 14. VISUAL DESIGN AND 2D ART DIRECTION
+
+The game must look and feel like an actual illustrated educational video game.
+
+## Main characters
+
+Create two original child astronaut characters:
+
+- One boy astronaut.
+- One girl astronaut.
+
+Both characters must:
+
+- Be illustrated in 2D.
+- Have friendly, expressive faces.
+- Have recognizable astronaut suits.
+- Use a consistent color palette.
+- Maintain consistent proportions and details throughout the game.
+- Be clearly visible in the scenes.
+- Have simple expressions that communicate emotions and reactions.
+
+The player selects one character on the welcome screen.
+
+The selected character must remain consistent throughout the game.
+
+Do not replace the selected astronaut with a generic icon or avatar in the actual mission environments.
+
+## Environments
+
+Create five distinct illustrated 2D environments:
+
+1. Lunar landing site and habitat.
+2. Solar-energy outpost.
+3. Radiation-monitoring and shelter area.
+4. Lunar greenhouse and communication station.
+5. Complete lunar base for the final mission.
+
+Each of the fifteen challenges must also have a scene that visually reflects its specific problem.
+
+Reusing the same environment is acceptable only when the scene is meaningfully adapted to the challenge. Do not show the same static background for every challenge.
+
+Use interactive environmental elements where useful.
+
+Examples:
+
+- Solar panels that visibly change their energy status.
+- Water containers that show remaining water.
+- Oxygen indicators in the habitat.
+- A greenhouse with visible plant growth.
+- A radiation shelter that can be selected.
+- A communication antenna with a message-delay indicator.
+- A rover or equipment module that can be inspected.
+
+Use subtle animations to improve engagement, but respect reduced-motion preferences.
+
+The visual quality must be coherent, polished, child-friendly, and appropriate for a NASA educational challenge.
+
+---
+
+# 15. USER EXPERIENCE AND NAVIGATION
+
+The experience must be easy to understand from the first interaction.
+
+Provide:
+
+- A clear main menu.
+- A persistent way to return to the mission selection screen.
+- Clear progression indicators.
+- A consistent layout for challenge instructions and decisions.
+- A visible resource summary.
+- A clear continue button after a
